@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+:root {
+  --bg-canvas: #F5F5F3;
+  --bg-paper: #FDFCFA;
+  --bg-sidebar: #F9F9F8;
+  --bg-toolbar: #FFFFFF;
+  --bg-hover: #EEEEEC;
+  --bg-active: #E4EDF6;
+  --border: #E4E4E0;
+  --text-primary: #1A1A1A;
+  --text-secondary: #5F6368;
+  --text-muted: #8A8D91;
+  --accent: #1F4E79;
+  --accent-soft: #E4EDF6;
+  --ai-from: #E9A23B;
+  --ai-to: #D9822B;
+  --ai-text: #FFFFFF;
+  --success: #2E9E5B;
+  --tooltip-bg: #111827;
+  --tooltip-text: #FFFFFF;
+  --callout-border: #D6D6D2;
+  --shadow: 0 1px 2px rgba(0,0,0,0.05), 0 4px 16px rgba(0,0,0,0.04);
+  --node-bg: #FFFFFF;
+  --node-border: #E4E4E0;
+  --wire: #8A8D91;
+  --wire-active: #1F4E79;
+  --highlight-yellow: #FFE066;
+  --highlight-green: #8FE3A8;
+  --highlight-pink: #FFB3C7;
+  --highlight-blue: #9CC9FF;
+  --font-ui: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-hand: 'Caveat', cursive;
+}
+
+[data-theme="dark"] {
+  --bg-canvas: #0F1114;
+  --bg-paper: #181B20;
+  --bg-sidebar: #14171B;
+  --bg-toolbar: #1B1E24;
+  --bg-hover: #242830;
+  --bg-active: #1E3550;
+  --border: #2A2E36;
+  --text-primary: #ECEDEF;
+  --text-secondary: #A3A7AE;
+  --text-muted: #6F747C;
+  --accent: #6AA9E6;
+  --accent-soft: #1E3550;
+  --ai-from: #F0B04F;
+  --ai-to: #E08A33;
+  --ai-text: #1A1204;
+  --success: #4CC585;
+  --tooltip-bg: #ECEDEF;
+  --tooltip-text: #111827;
+  --callout-border: #3A3F48;
+  --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 4px 16px rgba(0,0,0,0.3);
+  --node-bg: #1B1E24;
+  --node-border: #2A2E36;
+  --wire: #6F747C;
+  --wire-active: #6AA9E6;
+  --highlight-yellow: #B29700;
+  --highlight-green: #237A47;
+  --highlight-pink: #9B2C4E;
+  --highlight-blue: #25589E;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-ui);
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  overflow: hidden;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Icon button hover behavior */
+.z-btn-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  transition: all 150ms ease;
+  user-select: none;
+  cursor: pointer;
+}
+.z-btn-icon:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-hover);
+  transform: translateY(-1px) scale(1.06);
+}
+.z-btn-icon:active {
+  transform: scale(0.94);
+  transition-duration: 80ms;
+}
+.z-btn-icon.active {
+  color: var(--accent);
+  background-color: var(--bg-active);
+}
+.z-btn-icon:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Paper page styling */
+.paper-page {
+  background-color: var(--bg-paper);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+/* LaTeX math container styling */
+.katex-display {
+  margin: 0.75em 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 0;
+}

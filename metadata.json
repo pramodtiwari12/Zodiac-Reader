@@ -1,0 +1,6 @@
+{
+  "name": "Zodiac Reader",
+  "description": "A PDF-first research and note-taking workspace with linked notebooks, an infinite node canvas, built-in Gemini AI, LaTeX and an in-app browser.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
